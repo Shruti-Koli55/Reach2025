@@ -1,0 +1,45 @@
+1. emmet (used by VS code to give boiler plates)
+for HTML ==> html:5
+
+Difference between a Library and Framework?
+- A library is like a toolbox—you pick and use the tools you need.
+- A framework is like a blueprint—you follow its structure, and it calls your code.
+
+
+React is a library, not a framework
+React is a library because it focuses on just the UI layer, offers flexibility, and does not enforce a strict way to build an entire application. However, with the right ecosystem, it can behave like a framework.
+
+
+CDN
+A CDN (Content Delivery Network) is a distributed network of servers that helps deliver web content (like images, videos, stylesheets, scripts, and HTML) faster to users by caching and serving it from servers located closer to them.
+
+Why is React called "React"?
+The name React comes from its reactive nature, meaning it efficiently updates and renders components in response to state or data changes.
+
+What is crossorigin in the <script> tag?
+The crossorigin attribute in the <script> tag is used for handling cross-origin resource sharing (CORS) when loading external scripts. It determines whether the browser should send credentials (cookies, HTTP authentication) when requesting the script from another domain.
+
+
+● What is diference between React and ReactDOM
+React (react package)
+Contains the core functionalities like component creation, hooks (useState, useEffect), and JSX handling.
+Does not directly interact with the browser DOM.
+ReactDOM (react-dom package)
+Provides methods to render React components into the actual DOM (ReactDOM.createRoot).
+Needed only for web applications (not React Native).
+
+● What is difference between react.development.js and react.production.js files via CDN?
+-Better Developer Experience – The development version helps catch mistakes early.
+-Optimized Performance in Production – The production version improves speed and efficiency.
+-Use react.development.js while coding.
+-Switch to react.production.js before deploying your app.
+
+async and differ
+async Executes as soon as it is downloaded (independent of other scripts).Best for independent scripts
+	<script src="file.js" async></script>
+
+differ Executes after the HTML is fully parsed, in order.Best for scripts that need to execute in order
+    <script src="file.js" defer></script>
+    
+✔ Use async for non-critical scripts like Google Analytics, Ads, or tracking scripts.
+✔ Use defer for scripts that depend on each other (like React and ReactDOM).
